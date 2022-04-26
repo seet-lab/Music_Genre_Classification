@@ -1,0 +1,16 @@
+#listening-image-container {
+    height: 100%;
+    width: 40%;
+}
+
+.listening-image {
+    background: url("../../assets/images/listening.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    bottom: 100px;
+    right: 0px;
+}

@@ -1,0 +1,35 @@
+#banner-container {
+    height: 400px;
+    width: 100%;
+}
+
+.banner-img-wrapper {
+    background: url("../../assets/images/banner.svg");
+    background-position: -10px -10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-inner-container {
+    width: 50%;
+    height: 120px;
+    display: flex;
+}
+
+.app-logo {
+    width: 70px;
+    background: url("../../assets/images/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.app-name {
+    width: 60%;
+    font-weight: 600;
+    font-size: 48px;
+    color: white;
+}
