@@ -10,9 +10,9 @@ function LandingPage() {
           <div className="lp-content">
             <div className="lp-heading">Know your Music</div>
             <div className="lp-sub-heading pl-10 mt-20">Identify the music genre in seconds</div>
-            <button>
-              <div className="find-icon"></div>
-              Find
+            <button className="action-button">
+              <div className="find-icon mr-5"></div>
+              <div>Find</div>
             </button>
           </div>
           <ListeningImage />
