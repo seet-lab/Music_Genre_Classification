@@ -119,7 +119,7 @@ function LandingPage() {
               multiple={false}
               handleChange={handleChange}
               name="file"
-              label="Click-here to upload or drag and drop the .wav file"
+              label="Click-here to upload or drag and drop a .wav or .mp3 file"
             />
           ) : !isFindAnother && !isRecommendation ? (
             <div className="file-description mt-30 mb-30">

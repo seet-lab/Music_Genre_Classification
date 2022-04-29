@@ -1,7 +1,11 @@
 import joblib
-
+from pydub import AudioSegment
 from collections import Counter
 from musicnn.extractor import extractor
+
+AudioSegment.converter = "D:\\PFW\\First Semester\\Software Engineering\\ffmpeg\\bin\\ffmpeg.exe"
+AudioSegment.ffmpeg = "D:\\PFW\\First Semester\\Software Engineering\\ffmpeg\\bin\\ffmpeg.exe"
+AudioSegment.ffprobe = "D:\\PFW\\First Semester\\Software Engineering\\ffmpeg\\bin\\ffprobe.exe"
 
 # Set the musical genres you want to check against
 TAGS = [
@@ -21,13 +25,30 @@ TAGS = [
 idx2tag = dict((n, TAGS[n]) for n in range(len(TAGS)))
 
 
-def classify_audio(fname: str, model_path="../models/features_classifier.pkl"):
+def classify_audio(fname: str, extension: str, model_path="../models/features_classifier.pkl"):
     # Load classifier
     clf = joblib.load(model_path)
+    if(extension == '.mp3'):
+        startMin = 1
+        startSec = 00
+
+        endMin = 1
+        endSec = 30
+
+        # Time to miliseconds
+        startTime = startMin*60*1000+startSec*1000
+        endTime = endMin*60*1000+endSec*1000
+
+        # Opening file and extracting segment
+        song = AudioSegment.from_mp3(fname)
+        extract = song[startTime:endTime]
+
+        # Saving
+        song.export('./file.wav', format="wav")
 
     # Extract the `max_pool' features using musicnn
     _, _, features = extractor(
-        fname, model="MSD_musicnn", input_overlap=1, extract_features=True
+        './file.wav', model="MSD_musicnn", input_overlap=1, extract_features=True
     )
 
     maxpool_features = features["max_pool"]

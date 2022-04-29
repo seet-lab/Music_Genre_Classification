@@ -6,6 +6,7 @@ import numpy as np
 from musicnn.extractor import extractor
 import classify
 import sys
+import os
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = "Content-Type"
@@ -17,9 +18,10 @@ def prediction():
 	try: 
 		print(request, file=sys.stdout)
 		formData = request.files['file']
-		formData.save("./file.wav")
+		filename, extension = os.path.splitext(formData.filename)
+		formData.save("./file" + extension)
 
-		prediction = classify.classify_audio("./file.wav", "features_classifier.pkl")
+		prediction = classify.classify_audio("./file"+extension, extension, "features_classifier.pkl")
 		response = jsonify({
 			"statusCode": 200,
 			"status": "Prediction made",

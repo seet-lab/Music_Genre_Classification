@@ -88,6 +88,7 @@
 
 .sc-hKMtZM {
   font-size: 16px !important;
+  line-height: 30px;
 }
 
 .sc-bczRLJ > svg {
@@ -102,11 +103,15 @@
 }
 
 .cXBrtO > span:before {
+  content: "";
+  display: flex;
   background: url("../../assets/images/upload_icon.svg");
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
   background-size: contain;
+  float: left;
 }
 
 .center {
@@ -153,9 +158,6 @@
     transform: scale(0);
   }
 }
-
-
-
 
 .file-description {
   display: flex;
