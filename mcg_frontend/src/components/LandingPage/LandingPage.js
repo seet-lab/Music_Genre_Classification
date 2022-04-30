@@ -56,6 +56,7 @@ function LandingPage() {
 
   const goToFind = () => {
     console.log("Find");
+    setFormData(new FormData())
     setFind(true);
     setAnalysing(false);
     setUploaded(false);

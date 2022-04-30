@@ -2,6 +2,7 @@ import joblib
 from pydub import AudioSegment
 from collections import Counter
 from musicnn.extractor import extractor
+import os
 
 AudioSegment.converter = "D:\\PFW\\First Semester\\Software Engineering\\ffmpeg\\bin\\ffmpeg.exe"
 AudioSegment.ffmpeg = "D:\\PFW\\First Semester\\Software Engineering\\ffmpeg\\bin\\ffmpeg.exe"
@@ -61,6 +62,9 @@ def classify_audio(fname: str, extension: str, model_path="../models/features_cl
 
     # The assigned genre is the most common tag
     tag = Counter(y_pred_labels).most_common()[0][0]
+
+    if os.path.exists("./file.wav"):
+        os.remove("./file.wav")
 
     return tag
 
