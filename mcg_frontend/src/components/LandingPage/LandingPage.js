@@ -33,6 +33,7 @@ function LandingPage() {
     isAnalysing = true;
     setAnalysing(isAnalysing);
     setUploaded(false);
+
     fetch("http://localhost:5000/prediction", {
       headers: {
         Accept: "application/json",
@@ -116,7 +117,7 @@ function LandingPage() {
           ) : null}
 
           {isFind && !isUploaded ? (
-            <FileUploader
+            <FileUploader 
               multiple={false}
               handleChange={handleChange}
               name="file"
@@ -207,7 +208,9 @@ function LandingPage() {
             </div>
           )}
         </div>
-        <ListeningImage />
+        <div className="lp-listening-image">
+          <ListeningImage />
+        </div>
       </div>
     </div>
   );
