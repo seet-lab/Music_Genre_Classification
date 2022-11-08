@@ -65,10 +65,11 @@
 
     .app-name {
         width: 80%;
+        font-size: 2rem;
     }
 
     .banner-inner-container {
-        width: 75%;
+        width: 100%;
     }
 }
 

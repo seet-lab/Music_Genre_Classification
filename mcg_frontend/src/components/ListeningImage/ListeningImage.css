@@ -11,3 +11,16 @@
     right: 0px;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1630px){  
+    .listening-image {
+        width: 40%;
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 1350px) { 
+    .listening-image {
+        width: 35%;
+        height: 70%;
+    }
+}  
