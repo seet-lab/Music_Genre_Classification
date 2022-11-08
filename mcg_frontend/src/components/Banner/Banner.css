@@ -1,6 +1,7 @@
 #banner-container {
   height: 40%;
   width: 100%;
+  z-index: 1;
 }
 
 .banner-img-wrapper {

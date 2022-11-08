@@ -174,22 +174,22 @@ function LandingPage() {
               {tracks.length ? (
                 <div>
                   <div className="container-title mb-50">Recommendations for {genre}</div>
-                  <div className="recommendation-container mb-50">
+                  <div className="recommendation-container mb-25">
                       <div className="track-container" alt={tracks[0].data.name} onClick={() => openTrack(tracks[0].data.id)}>
                         <img src={tracks[0].data.albumOfTrack.coverArt.sources[0].url} width="150px" height="150px"/>
-                        <div className="track-title mt-20">{tracks[0].data.name}</div>
+                        <div className="track-title mt-20 mb-20">{tracks[0].data.name}</div>
                       </div>
                       <div className="track-container" alt={tracks[1].data.name} onClick={() => openTrack(tracks[1].data.id)}>
                         <img src={tracks[1].data.albumOfTrack.coverArt.sources[0].url} width="150px" height="150px"/>
-                        <div className="track-title mt-20">{tracks[1].data.name}</div>
+                        <div className="track-title mt-20 mb-20">{tracks[1].data.name}</div>
                       </div>
                       <div className="track-container" alt={tracks[2].data.name} onClick={() => openTrack(tracks[2].data.id)}>
                         <img src={tracks[2].data.albumOfTrack.coverArt.sources[0].url} width="150px" height="150px"/>
-                        <div className="track-title mt-20">{tracks[2].data.name}</div>
+                        <div className="track-title mt-20 mb-20">{tracks[2].data.name}</div>
                       </div>
                       <div className="track-container" alt={tracks[3].data.name} onClick={() => openTrack(tracks[3].data.id)}>
                         <img src={tracks[3].data.albumOfTrack.coverArt.sources[0].url} width="150px" height="150px"/>
-                        <div className="track-title mt-20">{tracks[3].data.name}</div>
+                        <div className="track-title mt-20 mb-20">{tracks[3].data.name}</div>
                       </div>
                   </div>
                 </div>
